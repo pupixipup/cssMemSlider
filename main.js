@@ -18,11 +18,12 @@ dot.id = i;
 controls.append(dot);
 dot.addEventListener('click', () => {
 slider.style.transform = `translateX(-${i * slideWidth}px)`
-sliderText.innerText = slides[i].getAttribute('alt');
 sliderText.classList.add('_fade');
 setTimeout(() => {
   sliderText.classList.remove('_fade');
-}, 200);
+  sliderText.innerText = slides[i].getAttribute('alt');
+}, 500);
+
 });
 }
 

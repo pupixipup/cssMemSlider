@@ -60,10 +60,11 @@ transition: 1s;
 .slider__text {
   opacity: 1;
   font-family: 'Arial', sans-serif;
+  transition: .5s;
 }
 
 ._fade {
-  transition: .2s;
+  transition: .5s;
   opacity: 0;
 }
 
