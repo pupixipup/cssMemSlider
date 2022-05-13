@@ -14,7 +14,7 @@ sliderText.innerText = slides[i].getAttribute('alt');
 sliderText.classList.add('_fade');
 setTimeout(() => {
   sliderText.classList.remove('_fade');
-}, 500);
+}, 200);
 });
 }
 

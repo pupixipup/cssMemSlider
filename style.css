@@ -54,10 +54,10 @@ transition: 1s;
 }
 
 .slider__text {
-  transition: 500ms;
   opacity: 1;
 }
 
 ._fade {
+  transition: .2s;
   opacity: 0;
 }
