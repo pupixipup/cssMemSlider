@@ -43,6 +43,10 @@ transition: 1s;
   transition: .3s;
   cursor: pointer;
 }
+
+.dot:active {
+  background-color: rgb(33, 138, 230) !important;
+}
 .slider__bottom {
   display: flex;
   justify-content: space-between;
@@ -55,9 +59,20 @@ transition: 1s;
 
 .slider__text {
   opacity: 1;
+  font-family: 'Arial', sans-serif;
 }
 
 ._fade {
   transition: .2s;
   opacity: 0;
 }
+
+._inactive {
+  opacity: 1;
+}
+
+._dot-active {
+  transition: .5s;
+  background-color: rgb(120, 160, 201) !important;
+}
+

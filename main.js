@@ -6,6 +6,14 @@ let sliderText = document.querySelector('.slider__text');
 for (let i = 0; i < slides.length; i++) {
 let dot = document.createElement('span');
 dot.classList.add('dot');
+dot.addEventListener('click', (e) => {
+  let dots = document.querySelectorAll('.dot');
+  dots.forEach( (item) => {
+    console.log(item);
+        item.classList.remove('_dot-active');
+  });
+  dot.classList.add('_dot-active');
+});
 dot.id = i;
 controls.append(dot);
 dot.addEventListener('click', () => {
@@ -19,3 +27,4 @@ setTimeout(() => {
 }
 
 window.addEventListener('resize', () => {location.reload()});
+
