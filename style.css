@@ -41,32 +41,27 @@ input {
 
 
 .wrapper label {
-  padding: 1rem;
+  background-color: grey;
+  box-sizing:border-box;
+  transform: scale(0.7);
+  padding: 1.4rem;
   cursor: pointer;
   display: inline-block;
   height: 1rem;
-  margin: 2rem 1rem 0 1rem;
   position: relative;
   width: 1rem;
   border-radius: 50%;
+  border: 10px solid white;
+  
 }
 
-.wrapper label:after {
-  border: 2px solid rgb(30, 63, 141);
-  content: " ";
-  display: block;
-  height: 1rem;
-  width: 1rem;
-  padding: 1rem;
-  transform: translate(-1.1rem, -1.1rem);
-  border-radius: 50%;
-}
+
 
 .wrapper label {
   cursor: pointer;
   display: inline-block;
   height: 0.5rem;
-  margin: 2rem 1rem 0 1rem;
+
   position: relative;
   width: 0.5rem;
   -webkit-border-radius: 50%;
@@ -86,11 +81,6 @@ input {
 #slide4:checked ~ .controls label:nth-of-type(4) {
  background: rgb(30, 63, 141);
 }
-
-#slide1:checked + .controls label {
-  opacity: 0;
-}
-
 
 .wrapper label:hover {  
   opacity: .5;
@@ -144,6 +134,9 @@ display: flex;
 @media (max-width: 1150px) {
   .text {
     flex-direction: column-reverse;
+  }
+  .descriptions {
+align-self: start;
   }
   .controls {
     margin-bottom: 1rem;
