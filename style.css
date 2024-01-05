@@ -1,0 +1,154 @@
+.wrapper {
+  height: 20vw;
+  padding-top: 3rem;
+  margin: 0 auto;
+  position: relative;
+  width: 40vw;
+}
+
+.slider {
+  background-color: #ddd;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  border-radius: 25px;
+}
+
+input {
+  display: none;
+}
+
+.slides {
+  height: inherit;
+  position: absolute;
+  width: inherit;
+  background-size: cover;
+}
+
+.slide1 {
+  background-image: url(assets/013aba.jpg);
+}
+.slide2 {
+  background-image: url(assets/fe1081b0fcb6ef277d498815a2f6a5fd.jpg);
+}
+.slide3 {
+  background-image: url(assets/Fotkayushchiy-Papich.webp);
+}
+.slide4 {
+  background-image: url(assets/maxresdefault.jpg);
+}
+
+
+.wrapper label {
+  background-color: grey;
+  box-sizing:border-box;
+  transform: scale(0.7);
+  padding: 1.4rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  width: 1rem;
+  border-radius: 50%;
+  border: 10px solid white;
+  
+}
+
+
+
+.wrapper label {
+  cursor: pointer;
+  display: inline-block;
+  height: 0.5rem;
+
+  position: relative;
+  width: 0.5rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: background ease-in-out 0.5s;
+  -moz-transition: background ease-in-out 0.5s;
+  -o-transition: background ease-in-out 0.5s;
+  transition: background ease-in-out 0.5s;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4) {
+ background: rgb(30, 63, 141);
+}
+
+.wrapper label:hover {  
+  opacity: .5;
+  transition: background ease-in-out 0.5s;
+}
+
+.slides {
+  height: inherit;
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+  z-index: 0;
+  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4 {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+#slide1:checked ~ .text > .description1,
+#slide2:checked ~ .text > .description2,
+#slide3:checked ~ .text > .description3,
+#slide4:checked ~ .text > .description4 {
+  display: block;
+  animation: fadeEffect 1s;
+}
+
+.descriptions {
+ font-family: 'Arial', sans-serif;
+ display: none;
+ animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.text {
+margin-top: 2rem;
+justify-content: space-between;
+align-items: center;
+display: flex;
+}
+
+@media (max-width: 1150px) {
+  .text {
+    flex-direction: column-reverse;
+  }
+  .descriptions {
+align-self: start;
+  }
+  .controls {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    height: 45vw;
+    padding-top: 3rem;
+    width: 90vw;
+  }
+}
+
+/* up to 300px  */
